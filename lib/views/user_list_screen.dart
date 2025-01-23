@@ -18,7 +18,7 @@ class UserListScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Purple-colored area with embedded search bar
+
           Container(
             color: Colors.purple,
             padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),

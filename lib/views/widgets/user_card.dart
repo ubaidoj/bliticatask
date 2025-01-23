@@ -10,14 +10,14 @@ class UserCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin:
-          EdgeInsets.symmetric(vertical: 6, horizontal: 12), // Reduced margin
+          EdgeInsets.symmetric(vertical: 6, horizontal: 12), 
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Padding(
-        padding: const EdgeInsets.all(12.0), // Reduced padding
+        padding: const EdgeInsets.all(12.0), 
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Activity Header
+            
             ListTile(
               contentPadding: EdgeInsets.zero,
               leading: Icon(Icons.restaurant, color: Colors.purple),
@@ -37,7 +37,7 @@ class UserCard extends StatelessWidget {
               title: Text(
                 user.name,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                overflow: TextOverflow.ellipsis, // Prevent text overflow
+                overflow: TextOverflow.ellipsis, 
               ),
               subtitle: Text(
                 "${user.location} - ${user.distance != null && user.distance! > 0 ? '${user.distance!.toStringAsFixed(2)} km' : 'Distance not available'}",
@@ -54,7 +54,6 @@ class UserCard extends StatelessWidget {
             ),
             SizedBox(height: 12),
 
-            // Date and Location Info
             Row(
               children: [
                 Icon(Icons.calendar_today, color: Colors.grey, size: 16),
@@ -63,7 +62,7 @@ class UserCard extends StatelessWidget {
                   child: Text(
                     "Date: Sun, Jul 17 2024",
                     style: TextStyle(color: Colors.grey[600]),
-                    overflow: TextOverflow.ellipsis, // Prevent text overflow
+                    overflow: TextOverflow.ellipsis, 
                   ),
                 ),
                 Icon(Icons.location_on, color: Colors.grey, size: 16),
@@ -72,7 +71,7 @@ class UserCard extends StatelessWidget {
                   child: Text(
                     user.location,
                     style: TextStyle(color: Colors.grey[600]),
-                    overflow: TextOverflow.ellipsis, // Prevent text overflow
+                    overflow: TextOverflow.ellipsis, 
                   ),
                 ),
               ],

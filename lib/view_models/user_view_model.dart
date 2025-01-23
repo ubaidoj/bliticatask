@@ -13,8 +13,6 @@ class UserViewModel extends ChangeNotifier {
   List<UserModel> get users => _users;
   bool get isLoading => _isLoading;
 
-  // Fetch users with pagination
-  // Fetch users with pagination
 Future<void> fetchUsers({bool isLoadMore = false}) async {
   if (_isLoading) return;
 
@@ -27,7 +25,6 @@ Future<void> fetchUsers({bool isLoadMore = false}) async {
 
     print("Fetched ${fetchedUsers.length} users from API");
 
-    // Get the current location
     await _getCurrentLocation();
     print("Current Position: $_currentPosition");
 
